@@ -14,7 +14,7 @@ workflows:
      - npm install -g ionic
      - ionic cordova platform add android
      - echo $GRADLE_PATH
-     - export PATH="$PATH:$GRADLE_PATH"
+     - export PATH=$GRADLE_PATH:$PATH
      - echo $PATH
      - ionic cordova build android
     artifacts:
