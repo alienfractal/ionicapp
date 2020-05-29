@@ -5,8 +5,7 @@ workflows:
     environment:
       vars:
           GRADLE_PATH: /Users/builder/programs/gradle-5.6.4/bin
-          ANDROID_SDK_ROOT: /Users/builder/programs/android-sdk-macosx
-      
+          ANDROID_SDK_ROOT: /Users/builder/programs/android-sdk-macosx    
       flutter: stable
       xcode: latest
       cocoapods: default
@@ -15,7 +14,7 @@ workflows:
      - npm install -g ionic
      - ionic cordova platform add android
      - echo $GRADLE_PATH
-     - export PATH=${PATH}: $GRADLE_PATH
+     - export PATH=$PATH: $GRADLE_PATH
      - echo $PATH
      - ionic cordova build android
     artifacts:
