@@ -16,7 +16,7 @@ workflows:
      - echo $GRADLE_PATH
      - export PATH=$GRADLE_PATH:$PATH
      - echo $PATH
-     - ionic cordova build android
+     - export PATH=$GRADLE_PATH:$PATH && ionic cordova build android
     artifacts:
      - android/app/build/outputs/**/**/*.apk
      - android/app/build/outputs/**/**/*.aab
