@@ -9,23 +9,10 @@ workflows:
       xcode: latest
       cocoapods: default
     scripts:
-     - |
-        # set up debug keystore
-        rm -f ~/.android/debug.keystore
-        cd android/app && keytool -genkeypair \
-          -alias androiddebugkey \
-          -keypass android \
-          -keystore debug.keystore \
-          -storepass android \
-          -dname 'CN=Android Debug,O=Android,C=US' \
-          -keyalg 'RSA' \
-          -keysize 2048 \
-          -validity 10000
      - npm install
      - npm install -g ionic
      - ionic cordova platform add android
      - ionic cordova build android
-   
     artifacts:
      - android/app/build/outputs/**/**/*.apk
      - android/app/build/outputs/**/**/*.aab
