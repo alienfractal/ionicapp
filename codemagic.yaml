@@ -18,8 +18,8 @@ workflows:
      - echo $PATH
      - export PATH=$GRADLE_PATH:$PATH && ionic cordova build android
     artifacts:
-     - android/app/build/outputs/**/**/*.apk
-     - android/app/build/outputs/**/**/*.aab
+     - platforms/android/app/build/outputs/apk/**/*.apk
+     - platforms/android/app/build/outputs/apk/**/*.aab
      - /tmp/xcodebuild_logs/*.log 
      - $FCI_BUILD_DIR/*.zip
     publishing:
